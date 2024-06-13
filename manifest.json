@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "view later",
+    "description": "Save the webpage and view it later",
+    "version": "1.0",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "./asset/logo.png"
+    },
+    "icons": {
+      "16": "./asset/logo.png",
+      "32": "./asset/logo.png",
+      "48": "./asset/logo.png",
+      "128": "./asset/logo.png"
+    },
+    "background": {
+      "service_worker": "./script/savePage.js"
+    },
+    "side_panel": {
+      "default_path": "index.html"
+    },
+    "permissions": ["contextMenus","tabs", "storage","sidePanel"]
+  }

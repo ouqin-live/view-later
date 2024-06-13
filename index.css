@@ -1,0 +1,22 @@
+#list{
+    width: 100%;
+}
+
+.page-icon{
+    width: 16px;
+    height:16px;
+}
+
+.line{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.line a{
+    font-size: 14px;
+    width: 74%;
+    white-space: nowrap; /* 不换行 */
+    overflow: hidden; /* 超出部分隐藏 */
+    text-overflow: ellipsis; /* 单行省略号 */
+}
