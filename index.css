@@ -20,3 +20,6 @@
     overflow: hidden; /* 超出部分隐藏 */
     text-overflow: ellipsis; /* 单行省略号 */
 }
+.line .browsed{
+    color: gray;
+}

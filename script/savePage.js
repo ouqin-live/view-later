@@ -8,15 +8,13 @@ chrome.runtime.onInstalled.addListener(function () {
 
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId === "savePage") {
-    console.log("info", info);
-    console.log("tab", tab);
-
     // 存储当前网址和图标
     var pageData = {
       id: new Date().getTime(),
       url: tab.url,
       icon: tab.favIconUrl,
-      title: tab.title
+      title: tab.title,
+      clickCount:0
     };
 
     // 从本地存储中获取已保存的页面数据
@@ -29,6 +27,8 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
       chrome.storage.local.set({ savedPages: savedPages }, function () {
         console.log("当前网址和图标已保存");
       });
+
+      chrome.runtime.sendMessage({action: "update"});
     });
   }
 });
