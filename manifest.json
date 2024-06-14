@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "view later",
-    "description": "Save the webpage and view it later",
+    "name": "稍后再看",
+    "description": "右击保存链接，稍后再看",
     "version": "1.0",
     "action": {
       "default_popup": "index.html",
